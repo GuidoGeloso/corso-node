@@ -1,0 +1,25 @@
+Creare un'applicazione con i seguenti componenti:
+
+STEP 0 
+1) modulo node con server che espone
+    - file con home page
+    - servizio rest che restituisce elenco di persone
+2) Front-end
+    - applicazione Angular single page che mostra elenco di persone
+
+STEP 1
+1) recupero elenco delle persone da database mongoDB
+2) servizio di inserimento e update persone
+
+STEP 2
+1) creare un pod con l'immagine dell'applicazione di cui sopra
+2) deploy dell'applicazione su kubernetes
+3) scale dell'applicazione al crescere delle richieste
+
+
+STEP 3
+1) creazione di uno script jmeter che chiama la pagina index per recupero elenco delle persone
+2) verifica dell'aumento della richiesta di risorse con l'aumentare delle richieste fatte da jmeter
+3) introduzione di una cache REDIS sul cluster Kubenernetes in cui salvare l'elenco degli utenti
+4) check riduzione richiesta CPU post introduzione cache
+5) creazione di un pod python schedulato che ogni tot verifica se ci sono nuovi inserimenti e sincronizza il redis
