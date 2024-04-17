@@ -1,13 +1,13 @@
-const debugApp = require('debug')('app:app');
+const debugApp = require('debug')('app:persone');
 
 class Persona{
 
     nome = "";
     anni = 0;
 
-    constructor(nome, anni){
-        this.nome = nome;
-        this.anni = anni;
+    constructor(_nome, _anni){
+        this.nome =_nome;
+        this.anni =_anni;
     }
 
 }
@@ -21,6 +21,6 @@ listaPersone.push(new Persona('Altro', 42));
 listaPersone.push(new Persona('Bolombo', 12));
 listaPersone.push(new Persona('Sgangarello', 77));
 
-debugApp('Init di listaPersone done: '+listaPersone)
+debugApp('Init di listaPersone done: '+listaPersone.length)
 
 module.exports = {listaPersone, Persona};

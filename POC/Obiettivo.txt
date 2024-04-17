@@ -4,12 +4,11 @@ STEP 0
 1) modulo node con server che espone
     - file con home page
     - servizio rest che restituisce elenco di persone
-2) Front-end
-    - applicazione Angular single page che mostra elenco di persone
+    - visualizzare la lista di persone nella home page usando ejs
 
 STEP 1
-1) recupero elenco delle persone da database mongoDB
-2) servizio di inserimento e update persone
+2) recupero elenco delle persone da database mongoDB
+3) servizio di inserimento persone
 
 STEP 2
 1) creare un pod con l'immagine dell'applicazione di cui sopra
@@ -23,3 +22,8 @@ STEP 3
 3) introduzione di una cache REDIS sul cluster Kubenernetes in cui salvare l'elenco degli utenti
 4) check riduzione richiesta CPU post introduzione cache
 5) creazione di un pod python schedulato che ogni tot verifica se ci sono nuovi inserimenti e sincronizza il redis
+
+
+STEP 4
+1) Introdurre Applicazione Angular come front-end che utilizza i servizi esposti dal modulo node.js
+2) Deployare l'applicazione front-end su kubernetes
